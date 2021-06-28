@@ -1,4 +1,39 @@
 :root {
+  --dark-cyan: #0E8784;
+  --dark-grey-blue: #333D4B;
+  --pale-orange: #FDD6BA;
+  --light-grey-bg: #FEFCF7;
+  --grey: #83888F;
+  --main-font: "Barlow", "Arial", sans-serif;
+  --secondary-font: "Fraunces", "Times New Roman", serif;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.woff2") format("woff2"),
+  url("../fonts/Barlow-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/Fraunces9pt-Black.woff2") format("woff2"),
+  url("../fonts/Fraunces9pt-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Bold.woff2") format("woff2"),
+  url("../fonts/Barlow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* GENERAL */
@@ -43,9 +78,85 @@ img {
 
 /* CONTAINER */
 .container {
-  max-width: 900px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100%;
+  max-width: 1340px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+
+/* SITE-HEADER */
+.site-header {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo__img {
+  display: block;
+}
+
+.site-header__toggler {
+  width: 16px;
+  height: 15px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-position: center center;
+  background-color: transparent;
+  background-image: url("../img/navbar-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.sitenav {
+  position: absolute;
+  top: 100%;
+  left: -24px;
+  right: -24px;
+  height: calc(100vh - 90px);
+  padding: 40px 24px;
+  text-align: center;
+  transform: translateY(-1200px);
+  background: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+  font-family: var(--secondary-font);
+  transition: transform 0.6s ease;
+}
+
+.site-header--open .site-header__toggler {
+  background-image: url("../img/cancel-nav-icon.svg");
+}
+
+.site-header--open .sitenav {
+  transform: translateY(0);
+}
+
+.sitenav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.sitenav__link {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--dark-grey-blue);
+}
+
+
