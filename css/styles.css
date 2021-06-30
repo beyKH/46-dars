@@ -1008,6 +1008,23 @@ img {
     margin-right: 32px;
   }
 
+  /* -------------------------- ABOUT SECTION TABLET -------------------- */
+  .about{
+    padding: 120px 60px;
+    background-image: url("../img/about-us-bg-tablet.jpg");
+  }
+
+  .about__inner{
+    text-align: left;
+    max-width: 400px;
+  }
+
+
+
+
+
+
+
 }
 
 @media only screen and (min-width:1150px){
@@ -1249,4 +1266,26 @@ img {
      display: flex;
      align-items: center;
    }
+
+     /* -------------------------- ABOUT SECTION DESKTOP-------------------- */
+     .about {
+       padding: 120px 60px;
+       background-image: url("../img/about-us-bg-desktop.jpg");
+     }
+
+     .about__inner {
+       text-align: left;
+       max-width: 445px;
+     }
+
+     .about__heading{
+       font-size: 40px;
+       line-height: 48px;
+     }
+
+     .about__info{
+       font-size: 16px;
+       line-height: 26px;
+     }
+
 }
