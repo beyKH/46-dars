@@ -621,6 +621,39 @@ img {
 }
 
 
+/* ------- ---------------- */
+
+/* ABOUT US */
+.about{
+  background-image: url("../img/about-us-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 115px 24px 85px;
+  border-radius: 10px;
+
+}
+
+.about__inner {
+  color: var(--light-grey-bg);
+  text-align: center;
+}
+
+.about__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: var(--secondary-font);
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.about__info {
+  margin: 0;
+  color: var(--light-grey-bg);
+  opacity: 0.8;
+}
+
+
 @media  only screen and (min-width: 540px) {
   .hero{
     background-position: center top;
@@ -976,7 +1009,6 @@ img {
   }
 
 }
-
 
 @media only screen and (min-width:1150px){
   .container{
