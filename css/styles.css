@@ -653,6 +653,170 @@ img {
   opacity: 0.8;
 }
 
+  /* COMMITMENT */
+  .commitnent {
+    padding-top: 48px;
+    padding-bottom: 200px;
+
+  }
+
+  .commitment__wrapper {
+    text-align: center;
+  }
+
+  .commitment__img {
+    border-radius: 10px;
+    margin-bottom: 48px;
+  }
+
+  .commitment__inner {}
+
+  .commitment__heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-family: var(--secondary-font);
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--dark-grey-blue);
+  }
+
+  .commitment__info {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--dark-grey-blue);
+    opacity: 0.8;
+  }
+
+  /* QUALITY SECTION */
+  .quality {
+    position: relative;
+    z-index: 1;
+    padding: 142px 24px 60px;
+    background-color: var(--dark-grey-blue);
+    border-radius: 10px;
+  }
+
+  .quality::before {
+    content: '';
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    transform: translateY(-50%);
+    left: 24px;
+    border-radius: 12px;
+    width: 280px;
+    height: 156px;
+    background-image: url("../img/quality-coffee.jpg");
+  }
+
+
+  .quality__wrapper {
+    color: var(--light-grey-bg);
+    text-align: center;
+  }
+  .quality__heading {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 900;
+    font-family: var(--secondary-font);
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .quality__info {
+    margin: 0;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 0.8;
+  }
+
+  .offices {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .offices__heading {
+    margin-top: 0;
+    margin-bottom: 72px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--grey);
+    text-align: center;
+    font-family: var(--secondary-font);
+  }
+
+  .offices__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .offices__item:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
+  .offices__item::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    margin-bottom: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: block;
+  }
+
+  .item-office--uk::before{
+    background-image: url("../img/flag-united-kingdom.svg");
+  }
+
+  .item-office--canada::before{
+    background-image: url("../img/canada-flag.svg");
+  }
+
+  .item-office--au::before{
+    background-image: url("../img/australia-flag.svg");
+  }
+
+  .item-office {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .item-office__heading{
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 36px;
+    font-family: var(--secondary-font);
+  }
+
+  .item-office__address {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--dark-grey-blue);
+    text-align: center;
+
+  }
+
+  .item-office__tel{
+    text-decoration: none;
+    display: block;
+    color: var(--dark-grey-blue);
+  }
+
+
+
 
 @media  only screen and (min-width: 540px) {
   .hero{
@@ -1019,15 +1183,96 @@ img {
     max-width: 400px;
   }
 
+  /* COMMITMENT TABLET */
+  .commitnent{
+    padding-top: 144px;
+    padding-bottom: 304px;
+  }
+
+  .commitment__wrapper{
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .commitment__img{
+    width: 280px;
+    height: 470px;
+    flex-shrink: 0;
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
+  .commitment__inner{
+    width: 340px;
+
+  }
+
+  .commitment__heading{
+    margin-bottom: 30px;
+  }
 
 
+  /* QUALITY TABLET */
+  .quality{
+    padding: 224px 74px 67px;
+  }
+
+   .quality::before{
+     left: 57px;
+     background-image: url("../img/quality-coffee-tablet.png");
+     width: 573px;
+     height: 320px;
+
+   }
 
 
+   .quality__heading{
+     font-size: 32px;
+     line-height: 48px;
+   }
+   .footer__item{
+     text-align: left;
+   }
+   .footer__item:not(:last-child){
+     margin-right: 10px;
+   }
 
+   /* OFFICE */
+   .offices {
+     padding-top: 144px;
+     padding-bottom: 144px;
+   }
 
+   .offices__heading {
+     margin-bottom: 72px;
+     text-align: left;
+   }
+
+   .offices__list {
+     display: flex;
+   }
+
+   .item-office{
+     align-items: start;
+     width: 220px;
+   }
+
+   .item-office:not(:last-child){
+     margin-right: 10px;
+     margin-bottom: 0;
+   }
+
+   .item-office__heading{
+     font-size: 24px;
+     line-height: 36px;
+   }
+
+   .item-office__address{
+     text-align: left;
+   }
 }
 
-@media only screen and (min-width:1150px){
+@media only screen and (min-width:1200px){
   .container{
     padding-left: 30px;
     padding-right: 30px;
@@ -1118,7 +1363,6 @@ img {
      margin-right: 30px;
    }
 
-   .coffee__inner {}
 
    .coffee__img {
      width: 255px;
@@ -1268,24 +1512,95 @@ img {
    }
 
      /* -------------------------- ABOUT SECTION DESKTOP-------------------- */
-     .about {
-       padding: 120px 60px;
-       background-image: url("../img/about-us-bg-desktop.jpg");
-     }
+   .about {
+     padding: 120px 60px;
+     background-image: url("../img/about-us-bg-desktop.jpg");
+   }
 
-     .about__inner {
-       text-align: left;
-       max-width: 445px;
-     }
+   .about__inner {
+     text-align: left;
+     max-width: 445px;
+   }
 
-     .about__heading{
-       font-size: 40px;
-       line-height: 48px;
-     }
+   .about__heading {
+     font-size: 40px;
+     line-height: 48px;
+   }
 
-     .about__info{
-       font-size: 16px;
-       line-height: 26px;
-     }
+   .about__info {
+     font-size: 16px;
+     line-height: 26px;
+   }
 
+   /* COMMITMENT DESKTOP */
+   .commitnent {
+     padding: 168px 87px 256px;
+   }
+
+   .commitment__img{
+     margin-right: 125px;
+     width: 445px;
+     height: 520px;
+   }
+
+
+   .commitment__inner{
+     width: 540px;
+   }
+
+   .commitment__heading{
+     margin-bottom: 32px;
+     font-size: 40px;
+     line-height: 48px;
+   }
+
+   .commitment__info{
+     font-size: 16px;
+     line-height: 26px;
+   }
+
+   /* QUALITY */
+
+   .quality{
+    padding: 88px 85px 176px;
+   }
+
+   .quality::before{
+     background-image: url("../img/quality-coffee-desktop.png");
+     width: 445px;
+     height: 474px;
+     left: auto;
+     right: 85px;
+     top: -20%;
+     transform: translateY(0);
+   }
+
+   .quality__wrapper{
+     width: 540px;
+     text-align: left;
+   }
+
+   /* offices */
+
+   .offices{
+    padding-top: 168px;
+    padding-left: 135px;
+    padding-bottom: 168px;
+   }
+
+   .offices__list{
+   }
+
+   .offices__item{
+     width: 285px;
+   }
+
+   .offices__item:not(:last-child){
+     margin-right: 95px;
+   }
+
+   .item-office__heading{
+    font-size: 32px;
+    line-height: 36px;
+   }
 }
