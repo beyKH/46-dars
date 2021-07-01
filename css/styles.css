@@ -226,13 +226,16 @@ img {
 /* HERO */
 .hero {
   padding: 100px 24px;
-  background-image: url("../img/mobile-hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   border-radius: 10px;
-  border-radius: 10px;
   color: white;
+}
+
+.index-hero{
+  background-image: url("../img/mobile-hero-bg.jpg");
+
 }
 
 .hero__inner {
@@ -443,16 +446,15 @@ img {
   padding-right: 20px;
 }
 
-/* WORKING PROCESS */
-.working-process {
+/* WORK PROCESS */
+.work-process {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.working-process__heading {
+.work-process__heading {
   margin-top: 0;
   margin-bottom: 80px;
-  font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 32px;
@@ -461,58 +463,63 @@ img {
   text-align: center;
 }
 
-.working-process__list {
+.work-process__list {
   margin: 0;
   padding: 0;
-  margin-bottom: 80px;
   list-style: none;
+  display: flex;
+  flex-direction: column;
   counter-reset: steps;
 }
 
-.working-proces__item {
+.work-process__item {
+  counter-increment: steps;
+}
+
+.work-process__item:not(:last-child) {
+  margin-bottom: 56px;
+}
+
+.step-process {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  counter-increment: steps;
 }
 
-.working-proces__item:not(:last-child){
-  margin-bottom: 56px;
-}
-
-.working-proces__item::before {
-  width: 100px;
+.step-process__box::before {
+  content: '';
+  display: block;
   margin-bottom: 24px;
-  content: '0'  counter(steps);
-  font-family: var(--secondary-font);
+  content: '0'counter(steps);
   font-weight: 900;
   font-size: 72px;
   line-height: 72px;
   color: var(--pale-orange);
-  text-align: center;
-  display: block;
-
+  font-family: var(--secondary-font);
 }
 
-.item-process__box {}
-
-.item-process__heading {
+.step-process__heading {
   margin-top: 0;
   margin-bottom: 24px;
-  font-family: var(--secondary-font);
-  color: var(--dark-grey-blue);
   font-weight: 900;
   font-size: 28px;
   line-height: 32px;
+  font-family: var(--secondary-font);
+  color: var(--dark-grey-blue);
 }
 
-.item-process__info {
-  margin-top: 0;
-  margin-bottom: 0;
+.step-process__br {
+  display: none;
 }
-.working-process__link-box{
-  text-align: center;
+
+.step-process__info {
+  margin: 0;
+  color: var(--dark-grey-blue);
+}
+
+.btn-work--process{
+  margin-top: 64px;
 }
 
 /* FOOTER */
@@ -624,7 +631,7 @@ img {
 /* ------- ---------------- */
 
 /* ABOUT US */
-.about{
+.about-hero{
   background-image: url("../img/about-us-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -633,12 +640,12 @@ img {
 
 }
 
-.about__inner {
+.about-hero__inner {
   color: var(--light-grey-bg);
   text-align: center;
 }
 
-.about__heading {
+.about-hero__heading {
   margin-top: 0;
   margin-bottom: 24px;
   font-family: var(--secondary-font);
@@ -647,7 +654,7 @@ img {
   line-height: 28px;
 }
 
-.about__info {
+.about-hero__info {
   margin: 0;
   color: var(--light-grey-bg);
   opacity: 0.8;
@@ -703,8 +710,8 @@ img {
     z-index: 1;
     position: absolute;
     top: 0%;
-    transform: translateY(-50%);
-    left: 24px;
+    left: 50%;
+    transform: translate(-50%,-50%);
     border-radius: 12px;
     width: 280px;
     height: 156px;
@@ -815,7 +822,37 @@ img {
     color: var(--dark-grey-blue);
   }
 
+  /*  ===================  PLAN PAGE =========== */
+  .plan-hero{
+    background-image: url("../img/plan-hero-bg.jpg");
+  }
 
+  /* PLAN LIST */
+
+  .work-process{
+  }
+
+  .work-process__plan{
+
+  }
+
+  .work-process__list{
+    padding:80px 24px;
+    border-radius: 10px;
+    background-color: #2C343E;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .work-process__plan--item{
+    color: var(--light-grey-bg);
+  }
+
+  .work-process__plan--heading{
+    color: var(--light-grey-bg);
+  }
+  .work-process__plan--info{
+    color: var(--light-grey-bg);
+  }
 
 
 @media  only screen and (min-width: 540px) {
@@ -1071,82 +1108,70 @@ img {
 
 
   /* WORKING PROCESS TABLET */
+   /* WORK PROCESS */
+   .work-process {
+     padding-top: 144px;
+     padding-bottom: 144px;
 
-  .working-process{
-    padding-top: 144px;
-    padding-bottom: 144px;
-  }
-
-  .working-process__heading{
-    margin-bottom: 55px;
-    text-align: left;
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  .working-process__circles{
-    position: relative;
-    margin-bottom: 62px;
-    width: 500px;
-    height: 2px ;
-    background-color: #FDD6BA;
-    z-index: 1;
-  }
-
-  .working-process__circle{
-    position: absolute;
-    display: inline-block;
-    width: 31px;
-    height: 31px;
-    border-radius: 50%;
-    border: 2px solid #0E8784;
-    transform: translateY(-50%);
-    z-index: 1;
-    background-color: var(--light-grey-bg);
    }
 
+   .work-process__heading {
+     margin-bottom: 120px;
+     text-align: left;
+   }
 
-   .working-process__circle--start{
+   .work-process__list {
+     flex-direction: row;
+   }
+
+   .work-process__item {
+     flex-grow: 1;
+     position: relative;
+   }
+
+   .work-process__item:not(:last-child) {
+     padding-right: 10px;
+   }
+
+   .work-process__item:not(:last-child):before {
+     content: '';
+     position: absolute;
+     top: -65px;
      left: 0;
-   }
-   .working-process__circle--middle{
-    left: calc(50% + -13px);
-
-   }
-
-   .working-process__circle--end{
-    right: 0;
-
+     right: 0;
+     height: 2px;
+     background-color: var(--pale-orange);
+     display: block;
+     z-index: 1;
    }
 
-  .working-process__list{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 44px;
+   .work-process__item {
+     padding-right: 10px;
+   }
 
-  }
+   .work-process__item::after {
+     content: '';
+     position: absolute;
+     top: -65px;
+     left: 0;
+     transform: translateY(-50%);
+     width: 31px;
+     height: 31px;
+     z-index: 1;
+     background-color: var(--light-grey-bg);
+     border: 2px solid var(--dark-cyan);
+     border-radius: 50%;
 
-  .working-proces__item{
-    width: 225px;
-    justify-content: start;
-    text-align: left;
-    align-items: start;
-  }
+   }
 
-  .working-proces__item::before{
-    margin-bottom: 42px;
+   .step-process {
+     text-align: left;
+   }
 
-  }
+   .step-process__br {
+     display: block;
+   }
 
-  .working-proces__item:not(:last-child){
-    margin-right: 10px;
-    margin-bottom: 0;
-  }
-
-
-  .working-process__link-box{
-    text-align: left;
-  }
 
   /* FOOTER TABLET */
   .footer{
@@ -1173,12 +1198,14 @@ img {
   }
 
   /* -------------------------- ABOUT SECTION TABLET -------------------- */
-  .about{
+  .about-hero{
     padding: 120px 60px;
     background-image: url("../img/about-us-bg-tablet.jpg");
   }
 
-  .about__inner{
+
+
+  .about-hero__inner{
     text-align: left;
     max-width: 400px;
   }
@@ -1219,6 +1246,7 @@ img {
 
    .quality::before{
      left: 57px;
+     transform: translate(0,0);
      background-image: url("../img/quality-coffee-tablet.png");
      width: 573px;
      height: 320px;
@@ -1270,6 +1298,44 @@ img {
    .item-office__address{
      text-align: left;
    }
+
+
+   /* ======================= PLAN HERO  ==================*/
+   .plan-hero{
+     background-image: url("../img/plan-hero-bg-tablet.png");
+   }
+
+
+   /* WORKING PROCESS PLAN TABLET */
+
+   .work-process__list{
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 180px 40px 95px;
+   }
+
+   .work-process__plan--item::after{
+    background-color: transparent;
+    z-index: 2;
+   }
+
+  .work-process__plan--item:nth-child(1)::before {
+      left: 5%;
+  }
+
+   @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 2/1),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+     .plan-hero {
+       background-image: url('../img/plan-hero-bg-tablet@2x.png');
+     }
+   }
+
+
+
 }
 
 @media only screen and (min-width:1200px){
@@ -1454,34 +1520,38 @@ img {
    }
 
 
+/* WORK-PROCESS */
 
-   .working-process{
-    padding: 200px 85px 180px;
-
-   }
-   .working-process__heading{
-     margin-bottom: 95px;
+   .work-process{
+     padding-left: 85px;
+     padding-right: 85px;
    }
 
-   .working-process__circles{
-     width: 760px;
-     margin-bottom: 82px;
-   }
-
-
-   .working-process__list{
-     margin-bottom: 84px;
-   }
-
-   .working-proces__item{
-     width: 285px;
-   }
-  .working-proces__item:not(:last-child){
-    margin-right: 85px;
+  .work-process__item:not(:last-child) {
+    padding-right: 95px;
+    margin-bottom: 0;
   }
 
-  .item-process__heading{
+
+  .work-process__item {
+    width: 285px;
+    padding-right: 95px;
+  }
+
+  .step-process__box::before {
+    margin-bottom: 38px;
+  }
+
+  .step-process__heading {
     margin-bottom: 42px;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .step-process__info {
+    font-size: 16px;
+    line-height: 26px;
   }
 
 
@@ -1512,22 +1582,22 @@ img {
    }
 
      /* -------------------------- ABOUT SECTION DESKTOP-------------------- */
-   .about {
+   .about-hero {
      padding: 120px 60px;
      background-image: url("../img/about-us-bg-desktop.jpg");
    }
 
-   .about__inner {
+   .about-hero__inner {
      text-align: left;
      max-width: 445px;
    }
 
-   .about__heading {
+   .about-hero__heading {
      font-size: 40px;
      line-height: 48px;
    }
 
-   .about__info {
+   .about-hero__info {
      font-size: 16px;
      line-height: 26px;
    }
@@ -1603,4 +1673,57 @@ img {
     font-size: 32px;
     line-height: 36px;
    }
+
+
+   /* =============== PLAN HERO   ================= */
+   .plan-hero{
+     padding-top: 134px;
+     padding-bottom: 134px;
+     background-image: url("../img/plan-hero-bg-desktop.png");
+   }
+
+   /* WORKING PROCESS PLAN */
+   .work-process__plan{
+     padding: 168px 0;
+   }
+   .work-process__list {
+     margin-left: 0;
+     margin-right: 0;
+     padding: 200px 85px 100px 85px;
+   }
+
+   .work-process__plan--item{
+    width: 285px;
+
+   }
+
+   .work-process__plan--item:nth-child(1)::before{
+    left: 5%;
+   }
+
+   .work-process__plan--item:nth-child(3)::before{
+    width: 105%;
+  }
+
+   .work-process__plan--item::after {
+     background-color: transparent;
+     z-index: 2;
+   }
+
+
+
+
+   @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 2/1),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+     .plan-hero {
+       background-image: url('../img/plan-hero-bg-desktop@2x.png');
+     }
+   }
+
+
+
 }
